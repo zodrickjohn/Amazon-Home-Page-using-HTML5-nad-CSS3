@@ -33,9 +33,6 @@ To view the project locally, simply clone the repository:
 
 git clone https://github.com/zodrickjohn/Amazon-Home-Page-using-HTML5-nad-CSS3.git
 
-shell
-Copy code
-
 ## Usage
 
 Open the `index.html` file in your preferred web browser to view the replica.
