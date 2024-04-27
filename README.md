@@ -1,6 +1,6 @@
 # Amazon India Home Page Replica
 
-![Project Banner]((https://github.com/zodrickjohn/Amazon-Home-Page-using-HTML5-nad-CSS3/blob/main/Screenshot%202024-04-27%20095420.png?raw=true))
+![Project Banner](https://github.com/zodrickjohn/Amazon-Home-Page-using-HTML5-nad-CSS3/blob/main/Screenshot%202024-04-27%20095420.png?raw=true)
 
 ## Overview
 
