@@ -1,0 +1,666 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    font-size: 10px;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+    width: 100%;
+
+    background-color: gainsboro;
+}
+
+
+/* Scrollbar */
+::-webkit-scrollbar{
+    background-color: rgb(22, 22, 22);
+    height: 0.5rem;
+    width: 1rem;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: #b6b6b6;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 30px;
+}
+
+/* +++ NAVBAR +++ */
+.nav{
+    background-color: #0F1111;
+    /* height: 10rem; */
+    color: white;
+    font-weight: bold; 
+}
+.menu1{
+    background-color: #0F1111;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center; 
+    padding: 0 0.2rem;
+
+    overflow-x: scroll;
+}
+.menu2{
+    background-color: #23303a;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0.2rem;
+
+    overflow-x: scroll;
+}
+
+/* MENU 1 */
+.main1-items{
+    padding: 0 8px;
+    border: 1px solid #0F1111;
+    height: 5.2rem;
+    margin: 1rem 0;
+    flex-shrink: 0;
+}
+
+.main1-items:hover{
+    border: 1px solid #e7e7e7;
+}
+
+.logo{
+    padding: 0 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu1ham, .signinmob{
+    display: none;
+}
+
+.logoimg{
+   width: 105px;
+   height: 35px;
+   background-image: url('https://zeevector.com/wp-content/uploads/LOGO/Amazon-India-Logo-PNG-White2.png');
+   background-size: cover ;
+}
+
+.in{
+    margin-top: 9px;
+    align-self: flex-start;
+    font-size: 1.2rem;
+}
+
+
+.location{
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.licon-container{
+    width: 18px;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.licon{
+    width: 100%;
+    height: 25px;
+    background-image: url('https://toppng.com/uploads/thumbnail/white-location-icon-png-location-logo-png-white-11562856661b4wsud8br0.png');
+   background-size: cover ;
+}
+
+.loaction_delivery{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.pincode{
+    font-size: 1.2rem;
+    line-height: 0.5;
+    font-weight: 200;
+}
+.updatelocation{
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+
+.search{
+    border: 3px solid #ffb650;
+    height: 40px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-grow: 2;
+    padding: 0;
+}
+.search:hover{
+    border: 3px solid #ffb650;
+}
+
+.search_all{
+    width: 50px;
+    background-color: rgb(229, 228, 228);
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.2rem;
+    flex-shrink: 0;
+
+}
+
+.all{
+    color: #595959;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+.dropdown{
+    display: inline-block;
+    flex: 0 0 30%;
+    height: 13px;
+    /* background-color: red; */
+    background-size: cover;
+    background-image: url('https://cdn.iconscout.com/icon/premium/png-256-thumb/dropdown-1480596-1253423.png');
+}
+
+.search_text{
+    height: 100%;
+    padding: 1rem;
+    font-weight: 540;
+    font-size: 1.5em;
+    color: rgb(0, 0, 0);
+    border: none;
+    outline: none;
+    flex-grow: 1;
+}
+.search_text:focus{
+    border: none;
+}
+
+.search_icon{
+    width: 45px;
+    height: 100%;
+    background-color: #ffb650;
+    /* border-radius: 4px; */
+    background-image: url('https://raw.githubusercontent.com/riabhsh/Amazon-Home-Page-Layout-CSS-only/main/img/sprite.png');
+    object-fit: cover;
+    background-position: 4px -283px;
+    flex-shrink: 0;
+}
+
+.language{
+    width: 85px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
+}
+.language_icon{
+    width: 30px;
+    height: 20px;
+  background-image: url('https://upload.wikimedia.org/wikipedia/en/thumb/4/41/Flag_of_India.svg/1200px-Flag_of_India.svg.png');
+  background-size:cover;
+}
+.lanuage_title{
+    font-size: 14px;
+    font-weight: bold;
+
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 8px;
+    gap: 2px;
+}
+.arrow{
+    margin-top: 4px;
+    display: inline-block;
+    background-size: 150px auto;
+    background-image: url('https://raw.githubusercontent.com/riabhsh/Amazon-Home-Page-Layout-CSS-only/main/img/sprite.png');
+    background-position: 73px -145px;
+    width: 10px;
+    height: 6px;
+}
+
+.extra{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: fit-content;
+}
+.extra_title{
+    font-size: 1rem;
+    font-weight: 100;
+    line-height: 0.5;
+}
+.extra_text{
+    font-size: 1.4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+}
+
+.cart-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1.2rem;
+}
+.cart{
+    position: relative;
+}
+.torder{
+    position: absolute;
+    font-size: 2.1rem;
+    transform: translate(146%, -25%);
+    color: #f08804;
+
+}
+.carticon{
+    display: inline-block;
+    background-image: url('https://raw.githubusercontent.com/riabhsh/Amazon-Home-Page-Layout-CSS-only/main/img/sprite.png');
+    background-size: 320px auto;
+    background-position: -198px -302px;
+    width: 40px;
+    height: 36px;
+}
+.cart_title{
+    margin-top: 1rem;
+    font-size: 1.4rem;
+}
+
+/* MENU 2 */
+#menu2_all{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+}
+.menu2_all_ham{
+    margin-bottom: 2px;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+}
+.menu2_all_text{
+    columns: white;
+}
+
+.links{
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    font-size: 1.4rem;
+    font-weight: 550;
+    padding: 0.5rem;
+    border: 1px solid #23303a;
+}
+
+.links:hover{
+    border: 1px solid #e7e7e7;
+}
+#menu2_all{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+}
+.menu2_all_ham{
+    margin-bottom: 2px;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+}
+.menu2_all_text{
+    columns: white;
+}
+
+.links{
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    font-size: 1.4rem;
+    font-weight: 550;
+    padding: 0.5rem;
+    border: 1px solid #23303a;
+    flex-shrink: 0;
+}
+
+.links:hover{
+    border: 1px solid #e7e7e7;
+}
+
+
+/* +++ MAIN +++ */
+
+/* Card Component */
+.main{
+    background-color: rgba(255, 255, 0, 0.082);
+    margin: 0 auto;
+    gap: 2rem;
+    /* min-width: 100rem; */
+    max-width: 150rem;
+}
+
+/* Card template */
+.card{
+    width: 31.2rem;
+    min-width: 29.2rem;
+    height: 420px;
+    padding: 2rem;
+    background-color: rgb(255, 255, 255);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+.div_title{
+    font-size: 2.1rem;
+}
+.card_img-container{
+    flex-grow: 2;
+    width: 100%; 
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+    gap: 3rem 1rem;
+}
+.card_imgs{
+    display: inline-block;
+    width: 126px;
+    height: 100px;
+}
+.card_img{
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+    
+}
+.card_img_title{
+    font-size: 1.2rem;
+    color: #0F1111;
+    font-weight: 450;
+}
+
+.card_more{
+    text-decoration: none;
+    font-size: 1.3rem;
+    color: #007185;
+}
+.card_more:hover{
+    color: #058ba3;
+}
+
+
+
+/* GRID FOR CARDS */
+.cardGridContainer{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(29.2rem, 31.2rem));
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    justify-items: center;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+
+/* CAROUSAL GALLERY */
+.section1{
+    padding: 2rem;
+}
+.carousal_container{
+    background-color: white;
+    padding: 2rem 3rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.carousalgallery{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+
+    overflow-x: scroll;  
+}
+
+.carousal_more{
+    font-weight: 400;
+}
+
+.carousal_products{
+    width: 25rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.carousalimgcontainer{
+    width: 100%;
+   height: 150px;
+   overflow: hidden;
+}
+.carousal_img{
+    width: 326px;
+    height: auto;
+    object-position: -57px -58px;
+}
+
+.carousal_sale{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    gap: 5px;
+    color: white;
+    font-size: 12px;
+    width: 100%;
+}
+.carousalsale{
+    background-color: #cc0c39;
+    padding: 4px 6px;
+    border-radius: 2px;
+    cursor: pointer;
+}
+.carousalsaletitle{
+    color: #cc0c39;
+    font-weight: bold;
+}
+
+.carousalsale:hover{
+    background-color: #a80a2f;
+}
+
+.carousal_img_title{
+    font-size: 2rem;
+    font-weight: 500;
+    align-self: flex-start;
+}
+
+.footer{
+    background-color: #000a13;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.developer{
+    color: white;
+    font-weight: 200;
+
+}
+
+.zodrick:link, .zodrick:visited, .zodrick:hover, .zodrick:active{ 
+    text-decoration: none;
+    color: white;
+}
+
+.developer a:hover{
+    color: #ffff;
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 1016px) {
+      /* Card template */
+    .card{
+        width: 29.2rem;
+        min-width: 27.2rem;
+        height: 420px;
+        padding: 2rem;
+        background-color: rgb(255, 255, 255);
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 2rem;
+    }
+
+    .div_title{
+        font-size: 2.1rem;
+    }
+    .card_img-container{
+        flex-grow: 2;
+        width: 100%; 
+
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
+        align-content: center;
+        justify-items: center;
+        align-items: center;
+        gap: 3rem 1rem;
+    }
+    .card_imgs{
+        display: inline-block;
+        width: 110px;
+        height: 84px;
+    }
+
+    /* GRID FOR CARDS */
+    .cardGridContainer{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(27.2rem, 29.2rem));
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        justify-items: center;
+        gap: 2rem;
+        padding: 2rem;
+}
+}
+
+@media only screen and (max-width:500px){
+    nav{
+        position: relative;
+    }
+    .menu1{
+        position: fixed;
+        top: 0px;
+        background-color: #0F1111;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: center; 
+        padding: 0.5rem 1rem;
+    }
+
+    .display-none-mob{
+        display: none;
+    }
+
+    .main1-items{
+        margin: 0;
+        padding: 0;
+    }
+    .logo{
+        margin: 0;
+        padding: 0;
+    }
+
+    .cart-container{
+        order: 2;
+
+        margin: 0;
+        padding: 0.2rem;
+    }
+
+    .search{
+        order: 3;
+        margin: 0;
+        padding: 0;
+    }
+
+    .menu1ham{
+        display: inline-block;
+        width: 30px;
+        height: 64%;
+        margin-top: -15px;
+        background-position: -131px -249px;
+    }
+
+    
+    .signinmob{
+        display: inline-block;
+        width: 10rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.2rem;
+        margin-right: -75px;
+    }
+
+    .signinmob_title{
+        display: inline-block;
+        color: rgb(255, 255, 255);
+        font-size: 1.2rem;
+        font-weight: 400;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.2px;
+    }
+
+    .signinmob_right{
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        margin-top: 0.5px;
+    }
+    .signinmob_user{
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+    }
+
+    .main{
+        margin-top: 10rem;
+    }
+}
